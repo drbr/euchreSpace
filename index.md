@@ -10,7 +10,7 @@ _Published in memory of John Magiera, Euchre King of the Lake House._
 
 Four players, in two teams of two. Each player sits on one side of a square table, partners sitting across from each other. As this is a friendly Midwestern game, the players decide among themselves the seats, partnerships, scorekeeper, and the first dealer. The scorekeeper keeps score for both teams using pen and paper.
 
-# **Game structure and Object**
+# **Game Structure and Object**
 
 Euchre is a trick-taking game. Each round consists of the following phases: Dealing, Bidding, the Play, and Scoring. Successive rounds are played until one team wins the game by reaching 32 points.
 
@@ -28,7 +28,7 @@ One suit is designated each round as trump, which outranks the other three non-t
 
 The dealer shuffles the cards, then deals them clockwise around the table, starting with the hand to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Each player receives six cards, dealt in groups of 1, 2, or 3 (or any combination thereof) at the dealer’s choosing.
 
-### Misdeal scenarios
+### Misdeal Scenarios
 
 In certain cases where players are dealt a "bad hand", they may declare a misdeal, nullifying the deal and obligating the dealer to re-deal all the cards.
 
@@ -68,7 +68,7 @@ The player who won the bidding leads the first trick by selecting a card from th
 
 Once all four players have played, the trick (the four cards that were played) is won by the player who played the highest card of the suit led (if no trumps were played) or the highest trump (if trumps were played). The trick is collected by either the winning player or their partner (whichever is most convenient) and placed face-down in front of them on the table. The player who won the trick leads the next one, and play continues in this fashion until all six tricks have been.
 
-### House rule
+### House Rule
 
 If a player about to lead is certain that they have the cards necessary to take all the remaining tricks (for example, the only trumps left unplayed), they may lay down their hand face-up in lieu of leading a card. The players verify the hand and, if any cards are deemed not to be certain winners, the uncertain tricks are awarded to the opposing team.
 
