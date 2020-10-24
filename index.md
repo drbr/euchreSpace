@@ -6,15 +6,15 @@ The following rules are specific to how the game of “cards" was played in my f
 
 _Published in memory of John Magiera, Euchre King of the Lake Cottage._
 
-# **Players**
+# Players
 
 Four players, in two teams of two. Each player sits on one side of a square table, partners sitting across from each other. As this is a friendly Midwestern game, the players decide among themselves the seats, partnerships, scorekeeper, and the first dealer. The scorekeeper keeps score for both teams using pen and paper.
 
-# **Game Structure and Object**
+# Game Structure and Object
 
 Euchre is a trick-taking game. Each round consists of the following phases: Dealing, Bidding, the Play, and Scoring. Successive rounds are played until one team wins the game by reaching 32 points.
 
-# **Cards**
+# Cards
 
 The game is played with a deck of 24 conventional American playing cards, consisting of **A**, **K**, **Q**, **J**, **10**, **9** in each of the four suits. Half of a pinochle deck is usually used, to avoid uneven wear on a 52-card deck.
 
@@ -24,7 +24,7 @@ One suit is designated each round as trump, which outranks the other three non-t
 - In the trump suit, the jack of the trump suit is the highest trump (known as the _right bower_), followed by the jack of the other suit of the same color as the trump (_left bower_). Thus, the seven cards in the trump suit are ranked as follows: **J** (_right_), **J** (_left_), **A**, **K**, **Q**, **10**, **9**.
 - Example: when trump is spades, the seven trumps are **J**♠︎, **J**♣︎, **A**♠︎, **K**♠︎, **Q**♠︎, **10**♠︎, **9**♠︎. As long as spades are trump, **J**♣︎ is considered, for all purposes, a spade, not a club, leaving only five cards in the club suit.
 
-# **Dealing**
+# Dealing
 
 The dealer shuffles the cards, then deals them clockwise around the table, starting with the hand to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Each player receives six cards, dealt in groups of 1, 2, or 3 (or any combination thereof) at the dealer’s choosing.
 
@@ -36,7 +36,7 @@ In our play, we trigger a misdeal on one such scenario:
 
 - If any player is dealt all four **9**s, they may reveal their hand to trigger a misdeal.
 
-# **Bidding**
+# Bidding
 
 Starting with the player to the left of the dealer and continuing clockwise, each player has one opportunity to bid.
 
@@ -46,12 +46,12 @@ Any number from 1 to 6 (inclusive) is a valid bid (although 1, 5, and 6 are rare
 
 Each subsequent player must bid strictly higher than the current highest bid, or else they must pass. Once all four players have bid or passed, the player who bid the highest, having won the bid, names any one of the four suits as trump. If all four players passed, the cards are re-dealt and the bidding starts anew.
 
-### Variations:
+### Variations
 
 - Some communities allow the highest bidder to name “no trump”, where there are no left and right bowers, leaving **A** high in all four suits. Our family does not use this.
 - Some communities require the dealer to place a minimum bid (often 3 or 4) if all the preceding players have passed. We don’t do this either.
 
-## **Special Bids: Playing Alone**
+### Special Bids: Playing Alone
 
 In addition to the conventional bids described above, **a player may also bid to take all six tricks by playing alone**. This is nicknamed _shooting the moon_, or simply shooting. A player may do this in one of two ways:
 
@@ -62,7 +62,7 @@ A bid of 12 may be subsequently raised only by a bid of 24. In exceedingly rare 
 
 In either case, upon winning a lone bid, the partner of the lone player lays their cards face-down on the table and does not participate in the play for that round**. The lone player must take all six tricks to fulfill the bid.**
 
-# **The Play**
+# The Play
 
 The player who won the bidding leads the first trick by selecting a card from their hand and playing it face-up in the center of the table. There are no restrictions on what card may be led. Proceeding clockwise around the table, each of the three subsequent players also plays a card to the trick. Players must _follow suit_, that is, play a card whose suit matches the card led; if a player cannot follow suit, they may play any card of their choosing.
 
@@ -72,7 +72,7 @@ Once all four players have played, the trick (the four cards that were played) i
 
 If a player about to lead is certain that they have the cards necessary to take all the remaining tricks (for example, the only trumps left unplayed), they may lay down their hand face-up in lieu of leading a card. The players verify the hand and, if any cards are deemed not to be certain winners, the uncertain tricks are awarded to the opposing team.
 
-# **Scoring**
+# Scoring
 
 Once all six tricks have been played, both teams increment their score, with the winning bidder’s team scoring first:
 
@@ -82,6 +82,6 @@ Once all six tricks have been played, both teams increment their score, with the
 
 If either team reaches 32 points, that team wins the game. If both teams reach 32 in the same round, the winning bidder’s team scores first and thus wins (even if the opposing team would end up at a higher score).
 
-# **Irregularities**
+# Irregularities
 
 Euchre is a family game, and Midwesterners trust each other, so any irregularities should be handled at the players’ discretion.
