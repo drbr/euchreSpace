@@ -1,628 +1,893 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Bid Euchre</title><style>
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.highlight-default {
-}
-.highlight-gray {
-	color: rgb(155,154,151);
-}
-.highlight-brown {
-	color: rgb(100,71,58);
-}
-.highlight-orange {
-	color: rgb(217,115,13);
-}
-.highlight-yellow {
-	color: rgb(223,171,1);
-}
-.highlight-teal {
-	color: rgb(15,123,108);
-}
-.highlight-blue {
-	color: rgb(11,110,153);
-}
-.highlight-purple {
-	color: rgb(105,64,165);
-}
-.highlight-pink {
-	color: rgb(173,26,114);
-}
-.highlight-red {
-	color: rgb(224,62,62);
-}
-.highlight-gray_background {
-	background: rgb(235,236,237);
-}
-.highlight-brown_background {
-	background: rgb(233,229,227);
-}
-.highlight-orange_background {
-	background: rgb(250,235,221);
-}
-.highlight-yellow_background {
-	background: rgb(251,243,219);
-}
-.highlight-teal_background {
-	background: rgb(221,237,234);
-}
-.highlight-blue_background {
-	background: rgb(221,235,241);
-}
-.highlight-purple_background {
-	background: rgb(234,228,242);
-}
-.highlight-pink_background {
-	background: rgb(244,223,235);
-}
-.highlight-red_background {
-	background: rgb(251,228,228);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(55, 53, 47, 0.6);
-	fill: rgba(55, 53, 47, 0.6);
-}
-.block-color-brown {
-	color: rgb(100,71,58);
-	fill: rgb(100,71,58);
-}
-.block-color-orange {
-	color: rgb(217,115,13);
-	fill: rgb(217,115,13);
-}
-.block-color-yellow {
-	color: rgb(223,171,1);
-	fill: rgb(223,171,1);
-}
-.block-color-teal {
-	color: rgb(15,123,108);
-	fill: rgb(15,123,108);
-}
-.block-color-blue {
-	color: rgb(11,110,153);
-	fill: rgb(11,110,153);
-}
-.block-color-purple {
-	color: rgb(105,64,165);
-	fill: rgb(105,64,165);
-}
-.block-color-pink {
-	color: rgb(173,26,114);
-	fill: rgb(173,26,114);
-}
-.block-color-red {
-	color: rgb(224,62,62);
-	fill: rgb(224,62,62);
-}
-.block-color-gray_background {
-	background: rgb(235,236,237);
-}
-.block-color-brown_background {
-	background: rgb(233,229,227);
-}
-.block-color-orange_background {
-	background: rgb(250,235,221);
-}
-.block-color-yellow_background {
-	background: rgb(251,243,219);
-}
-.block-color-teal_background {
-	background: rgb(221,237,234);
-}
-.block-color-blue_background {
-	background: rgb(221,235,241);
-}
-.block-color-purple_background {
-	background: rgb(234,228,242);
-}
-.block-color-pink_background {
-	background: rgb(244,223,235);
-}
-.block-color-red_background {
-	background: rgb(251,228,228);
-}
-.select-value-color-default { background-color: rgba(206,205,202,0.5); }
-.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
-.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
-.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
-.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
-.select-value-color-green { background-color: rgba(0,135,107,0.2); }
-.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
-.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
-.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
-.select-value-color-red { background-color: rgba(255,0,26,0.2); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="698bbb0c-6e11-4c08-9181-663f4a076cb4" class="page sans"><header><h1 class="page-title">Bid Euchre</h1></header><div class="page-body"><p id="c286cc7c-429f-4787-bcf6-9a5f314b39e7" class="">The following rules are specific to how the game of “cards&quot; was played in my family in southeast Michigan. It’s essentially a single-deck 4-player Bid Euchre with no joker.</p><p id="8424553c-9972-4dbd-a609-8d212fc0c7e6" class=""><em>Published in memory of John Magiera, Euchre King of the Lake House.</em></p><h1 id="114a9417-c654-45bb-8dfe-1edc222e71dc" class=""><strong>Players</strong></h1><p id="83768512-f8e1-42a5-aadf-a1c5ea1e5f25" class="">Four players, in two teams of two. Each player sits on one side of a square table, partners sitting across from each other. As this is a friendly Midwestern game, the players decide among themselves the seats, partnerships, scorekeeper, and the first dealer. The scorekeeper keeps score for both teams using pen and paper.</p><h1 id="4bd55210-0cda-4946-9937-d363adc0ec0c" class=""><strong>Game structure and Object</strong></h1><p id="bb6bc950-5d14-4891-94e5-8c0438c0e7be" class="">Euchre is a trick-taking game. Each round consists of the following phases: Dealing, Bidding, the Play, and Scoring. Successive rounds are played until one team wins the game by reaching 32 points.</p><h1 id="30afb1a4-bffa-42d4-bb7a-ef1afab74f5c" class=""><strong>Cards</strong></h1><p id="101f6f5e-6084-4d60-803a-1b78e60b070f" class="">The game is played with a deck of 24 conventional American playing cards, consisting of <strong>A</strong>, <strong>K</strong>, <strong>Q</strong>, <strong>J</strong>, <strong>10</strong>, <strong>9 </strong>in each of the four suits. Half of a pinochle deck is usually used, to avoid uneven wear on a 52-card deck.</p><p id="0eec8b5a-65b0-46ba-a76b-b1d43e14dd8a" class="">One suit is designated each round as trump, which outranks the other three non-trump suits:</p><ul id="ff1643fb-67e7-4274-b009-22f0408af19b" class="bulleted-list"><li>In the non-trump suits, the rank is: <strong>A</strong> (<em>high</em>), <strong>K</strong>, <strong>Q</strong>, <strong>J</strong>, <strong>10</strong>, <strong>9</strong> (<em>low</em>).</li></ul><ul id="82e6e03d-85af-4146-8278-dc15d5229b8d" class="bulleted-list"><li>In the trump suit, the jack of the trump suit is the highest trump (known as the <em>right bower</em>), followed by the jack of the other suit of the same color as the trump (<em>left bower</em>). Thus, the seven cards in the trump suit are ranked as follows: <strong>J</strong> (<em>right</em>), <strong>J</strong> (<em>left</em>), <strong>A</strong>, <strong>K</strong>, <strong>Q</strong>, <strong>10</strong>, <strong>9</strong>.</li></ul><ul id="9f5f85f1-b766-4143-9ba1-3cb455ba7f08" class="bulleted-list"><li>Example: when trump is spades, the seven trumps are <strong>J</strong>♠︎, <strong>J</strong>♣︎, <strong>A</strong>♠︎, <strong>K</strong>♠︎, <strong>Q</strong>♠︎, <strong>10</strong>♠︎, <strong>9</strong>♠︎. As long as spades are trump, <strong>J</strong>♣︎ is considered, for all purposes, a spade, not a club, leaving only five cards in the club suit.</li></ul><h1 id="1d994339-699b-4484-a231-d6f3ac1884d5" class=""><strong>Dealing</strong></h1><p id="adf18762-d3b1-4999-a95d-aa1c9180f77c" class="">The dealer shuffles the cards, then deals them clockwise around the table, starting with the hand to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Each player receives six cards, dealt in groups of 1, 2, or 3 (or any combination thereof) at the dealer’s choosing.</p><h3 id="cb350d92-0c91-4ed0-ac7f-78de68b764da" class="">Misdeal scenarios</h3><p id="5973dc3a-2922-408e-8f34-d833d45b0557" class="">In certain cases where players are dealt a &quot;bad hand&quot;, they may declare a misdeal, nullifying the deal and obligating the dealer to re-deal all the cards.</p><p id="ccf1faf9-537f-4451-b5ea-1f142160f1af" class="">In our play, we trigger a misdeal on one such scenario:</p><ul id="92b0f9b0-8838-4494-9c25-44bd2fa8a030" class="bulleted-list"><li>If any player is dealt all four <strong>9</strong>s, they may reveal their hand to trigger a misdeal.</li></ul><h1 id="07cca586-aa40-4c73-9c84-50cc3cc274f3" class=""><strong>Bidding</strong></h1><p id="4223e526-9f08-4eac-a920-0457fd49a9c3" class="">Starting with the player to the left of the dealer and continuing clockwise, each player has one opportunity to bid.</p><p id="9f0be327-44ee-4396-b354-673fa12ceee5" class="">A bid specifies a contract: the winning bidder commits their team to win, at minimum, the number of tricks that they bid, in exchange for the privilege of naming the trump suit and leading the first card for that round.</p><p id="f3eb2b68-69cc-415c-9503-9dbfdb08ce33" class="">Any number from 1 to 6 (inclusive) is a valid bid (although 1, 5, and 6 are rarely used due to the Special Bids), and a player may also pass. A player places their bid by speaking the number out loud, or passes by saying “pass” and/or knocking on the table.</p><p id="3ab70a14-c80a-4c01-9c6c-f0967d0c4036" class="">Each subsequent player must bid strictly higher than the current highest bid, or else they must pass. Once all four players have bid or passed, the player who bid the highest, having won the bid, names any one of the four suits as trump. If all four players passed, the cards are re-dealt and the bidding starts anew.</p><h3 id="d54c7ab8-bb8e-4cd2-95a9-aa2171cf3a69" class="">Variations:</h3><ul id="30b66df1-26ca-4408-a9d9-6f9ded957722" class="bulleted-list"><li>Some communities allow the highest bidder to name “no trump”, where there are no left and right bowers, leaving <strong>A</strong> high in all four suits. Our family does not use this.</li></ul><ul id="d37b3f0a-5c17-46c1-bb4b-9cfb160dc5a4" class="bulleted-list"><li>Some communities require the dealer to place a minimum bid (often 3 or 4) if all the preceding players have passed. We don’t do this either.</li></ul><h2 id="cd8cf3dc-b49a-4e0b-96f1-3a70adbfa6ea" class=""><strong>Special Bids: Playing Alone</strong></h2><p id="83418516-8cd1-42b2-acd0-75d467f90cd3" class="">In addition to the conventional bids described above, <strong>a player may also bid to take all six tricks by playing alone</strong>. This is nicknamed <em>shooting the moon</em>, or simply shooting. A player may do this in one of two ways:</p><ul id="8ccbe089-4591-4cd6-8215-6a35a37be3c8" class="bulleted-list"><li>The player bids to play alone after discarding one card from their own hand and replacing it with a card from their partner’s hand (this exchange is often called <em>partner&#x27;s best</em>). This bid is worth 12 points, and is placed by the player dramatically laying their discard face-down on the table. If they win the bid, that player names the trump suit, and then the player’s partner selects a card from their own hand to replace the bidder’s discard.</li></ul><ul id="6b7ba77f-ac8c-420f-8ef8-926f9b3f19a0" class="bulleted-list"><li>The player may also bid to play alone using their hand as-is. This bid is worth 24 points, and may be placed whether or not a player has already bid 12. This bid is placed by the player announcing &quot;I&#x27;m going alone&quot; and/or saying the number 24.</li></ul><p id="af800a00-18c9-4360-a84d-9a52496ca440" class="">A bid of 12 may be subsequently raised only by a bid of 24. In exceedingly rare cases, a 24 may be raised by a subsequent bid of 48, which, other than the point value, behaves the same as the 24-point bid. 48 may be bid only to raise an existing bid of 24. Bids may theoretically continue to double in this fashion.</p><p id="c2b84c7a-478a-4b91-a4c5-0cc04a3fa8f4" class="">In either case, upon winning a lone bid, the partner of the lone player lays their cards face-down on the table and does not participate in the play for that round<strong>. The lone player must take all six tricks to fulfill the bid.</strong></p><h1 id="45663383-2958-4357-a128-1842e2cfb11c" class=""><strong>The Play</strong></h1><p id="1499a81b-3e99-43a9-a9f9-10948308dc89" class="">The player who won the bidding leads the first trick by selecting a card from their hand and playing it face-up in the center of the table. There are no restrictions on what card may be led. Proceeding clockwise around the table, each of the three subsequent players also plays a card to the trick. Players must <em>follow suit</em>, that is, play a card whose suit matches the card led; if a player cannot follow suit, they may play any card of their choosing.</p><p id="f7fae7ac-45b5-4466-b312-1ee8bd577649" class="">Once all four players have played, the trick (the four cards that were played) is won by the player who played the highest card of the suit led (if no trumps were played) or the highest trump (if trumps were played). The trick is collected by either the winning player or their partner (whichever is most convenient) and placed face-down in front of them on the table. The player who won the trick leads the next one, and play continues in this fashion until all six tricks have been.</p><h3 id="0b12980f-c927-4e77-ada4-2970e742645f" class="">House rule</h3><p id="7bfce7e6-5cf3-4a2f-ab74-befc16f966f0" class="">If a player about to lead is certain that they have the cards necessary to take all the remaining tricks (for example, the only trumps left unplayed), they may lay down their hand face-up in lieu of leading a card. The players verify the hand and, if any cards are deemed not to be certain winners, the uncertain tricks are awarded to the opposing team.</p><h1 id="8bb45932-b7e7-49c6-aaa7-067d26ef56f4" class=""><strong>Scoring</strong></h1><p id="aff3bc44-4c8f-4cf0-b4b8-965dd381b48e" class="">Once all six tricks have been played, both teams increment their score, with the winning bidder’s team scoring first:</p><ul id="6524e2c5-5fdd-466b-b23b-8e61f0310b27" class="bulleted-list"><li>If the winning bidder’s team took at least the number of tricks required by their bid, that team scores one point per trick that they took. If the winning bidder succeeded in taking all six tricks while playing alone, they score the point value of their bid (12, 24, etc.).</li></ul><ul id="c8883a17-cf7b-46dd-bf18-4aece2398cf1" class="bulleted-list"><li>If the winning bidder’s team did not succeed in taking the number of tricks required by their bid, they are said to be <em>set</em> (or <em>euchred</em>), and they lose points equal to the value of their bid (teams are allowed to have negative points).</li></ul><ul id="7fc3329f-ff2a-4ce2-a78d-ee34b55d619b" class="bulleted-list"><li>In either case, the opposing team scores one point per trick they took.</li></ul><p id="6a9fba89-84e5-4acf-9174-f6068b6bbe6c" class="">If either team reaches 32 points, that team wins the game. If both teams reach 32 in the same round, the winning bidder’s team scores first and thus wins (even if the opposing team would end up at a higher score).</p><h1 id="84f1501e-7682-446a-a348-0d0ed6bd83af" class=""><strong>Irregularities</strong></h1><p id="01bd19af-0de6-4935-83b8-fa219526bfc9" class="">Euchre is a family game, and Midwesterners trust each other, so any irregularities should be handled at the players’ discretion.</p><hr id="1ba9161e-8b9a-4d02-98c3-9f7a4a577d3a"/><p id="00de29b9-2e98-4efb-b580-6ace999adcb7" class="">©2020 Andrew Brandon-Rumman</p><p id="a7489785-c953-4bef-9ac6-b304a844c4a1" class="">
-</p></div></article></body></html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Bid Euchre</title>
+	<style>
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.column {
+			padding: 0 1em;
+		}
+
+		.column:first-child {
+			padding-left: 0;
+		}
+
+		.column:last-child {
+			padding-right: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+			border-collapse: collapse;
+		}
+
+		table {
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			text-indent: -1.7em;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-block;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1.25em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {}
+
+		.highlight-gray {
+			color: rgb(155, 154, 151);
+		}
+
+		.highlight-brown {
+			color: rgb(100, 71, 58);
+		}
+
+		.highlight-orange {
+			color: rgb(217, 115, 13);
+		}
+
+		.highlight-yellow {
+			color: rgb(223, 171, 1);
+		}
+
+		.highlight-teal {
+			color: rgb(15, 123, 108);
+		}
+
+		.highlight-blue {
+			color: rgb(11, 110, 153);
+		}
+
+		.highlight-purple {
+			color: rgb(105, 64, 165);
+		}
+
+		.highlight-pink {
+			color: rgb(173, 26, 114);
+		}
+
+		.highlight-red {
+			color: rgb(224, 62, 62);
+		}
+
+		.highlight-gray_background {
+			background: rgb(235, 236, 237);
+		}
+
+		.highlight-brown_background {
+			background: rgb(233, 229, 227);
+		}
+
+		.highlight-orange_background {
+			background: rgb(250, 235, 221);
+		}
+
+		.highlight-yellow_background {
+			background: rgb(251, 243, 219);
+		}
+
+		.highlight-teal_background {
+			background: rgb(221, 237, 234);
+		}
+
+		.highlight-blue_background {
+			background: rgb(221, 235, 241);
+		}
+
+		.highlight-purple_background {
+			background: rgb(234, 228, 242);
+		}
+
+		.highlight-pink_background {
+			background: rgb(244, 223, 235);
+		}
+
+		.highlight-red_background {
+			background: rgb(251, 228, 228);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(55, 53, 47, 0.6);
+			fill: rgba(55, 53, 47, 0.6);
+		}
+
+		.block-color-brown {
+			color: rgb(100, 71, 58);
+			fill: rgb(100, 71, 58);
+		}
+
+		.block-color-orange {
+			color: rgb(217, 115, 13);
+			fill: rgb(217, 115, 13);
+		}
+
+		.block-color-yellow {
+			color: rgb(223, 171, 1);
+			fill: rgb(223, 171, 1);
+		}
+
+		.block-color-teal {
+			color: rgb(15, 123, 108);
+			fill: rgb(15, 123, 108);
+		}
+
+		.block-color-blue {
+			color: rgb(11, 110, 153);
+			fill: rgb(11, 110, 153);
+		}
+
+		.block-color-purple {
+			color: rgb(105, 64, 165);
+			fill: rgb(105, 64, 165);
+		}
+
+		.block-color-pink {
+			color: rgb(173, 26, 114);
+			fill: rgb(173, 26, 114);
+		}
+
+		.block-color-red {
+			color: rgb(224, 62, 62);
+			fill: rgb(224, 62, 62);
+		}
+
+		.block-color-gray_background {
+			background: rgb(235, 236, 237);
+		}
+
+		.block-color-brown_background {
+			background: rgb(233, 229, 227);
+		}
+
+		.block-color-orange_background {
+			background: rgb(250, 235, 221);
+		}
+
+		.block-color-yellow_background {
+			background: rgb(251, 243, 219);
+		}
+
+		.block-color-teal_background {
+			background: rgb(221, 237, 234);
+		}
+
+		.block-color-blue_background {
+			background: rgb(221, 235, 241);
+		}
+
+		.block-color-purple_background {
+			background: rgb(234, 228, 242);
+		}
+
+		.block-color-pink_background {
+			background: rgb(244, 223, 235);
+		}
+
+		.block-color-red_background {
+			background: rgb(251, 228, 228);
+		}
+
+		.select-value-color-default {
+			background-color: rgba(206, 205, 202, 0.5);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(155, 154, 151, 0.4);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(140, 46, 0, 0.2);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(245, 93, 0, 0.2);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(233, 168, 0, 0.2);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(0, 135, 107, 0.2);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(0, 120, 223, 0.2);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(103, 36, 222, 0.2);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(221, 0, 129, 0.2);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(255, 0, 26, 0.2);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	</style>
+</head>
+
+<body>
+	<article id="698bbb0c-6e11-4c08-9181-663f4a076cb4" class="page sans">
+		<header>
+			<h1 class="page-title">Bid Euchre</h1>
+		</header>
+		<div class="page-body">
+			<p id="c286cc7c-429f-4787-bcf6-9a5f314b39e7" class="">The following rules are specific to how
+				the game of “cards&quot; was played in my family in southeast Michigan. It’s essentially a
+				single-deck 4-player Bid Euchre with no joker.</p>
+			<p id="8424553c-9972-4dbd-a609-8d212fc0c7e6" class=""><em>Published in memory of John Magiera,
+					Euchre King of the Lake House.</em></p>
+			<h1 id="114a9417-c654-45bb-8dfe-1edc222e71dc" class=""><strong>Players</strong></h1>
+			<p id="83768512-f8e1-42a5-aadf-a1c5ea1e5f25" class="">Four players, in two teams of two. Each
+				player sits on one side of a square table, partners sitting across from each other. As this
+				is a friendly Midwestern game, the players decide among themselves the seats, partnerships,
+				scorekeeper, and the first dealer. The scorekeeper keeps score for both teams using pen and
+				paper.</p>
+			<h1 id="4bd55210-0cda-4946-9937-d363adc0ec0c" class=""><strong>Game structure and
+					Object</strong></h1>
+			<p id="bb6bc950-5d14-4891-94e5-8c0438c0e7be" class="">Euchre is a trick-taking game. Each
+				round consists of the following phases: Dealing, Bidding, the Play, and Scoring. Successive
+				rounds are played until one team wins the game by reaching 32 points.</p>
+			<h1 id="30afb1a4-bffa-42d4-bb7a-ef1afab74f5c" class=""><strong>Cards</strong></h1>
+			<p id="101f6f5e-6084-4d60-803a-1b78e60b070f" class="">The game is played with a deck of 24
+				conventional American playing cards, consisting of <strong>A</strong>, <strong>K</strong>,
+				<strong>Q</strong>, <strong>J</strong>, <strong>10</strong>, <strong>9 </strong>in each of
+				the four suits. Half of a pinochle deck is usually used, to avoid uneven wear on a 52-card
+				deck.</p>
+			<p id="0eec8b5a-65b0-46ba-a76b-b1d43e14dd8a" class="">One suit is designated each round as
+				trump, which outranks the other three non-trump suits:</p>
+			<ul id="ff1643fb-67e7-4274-b009-22f0408af19b" class="bulleted-list">
+				<li>In the non-trump suits, the rank is: <strong>A</strong> (<em>high</em>),
+					<strong>K</strong>, <strong>Q</strong>, <strong>J</strong>, <strong>10</strong>,
+					<strong>9</strong> (<em>low</em>).</li>
+			</ul>
+			<ul id="82e6e03d-85af-4146-8278-dc15d5229b8d" class="bulleted-list">
+				<li>In the trump suit, the jack of the trump suit is the highest trump (known as the
+					<em>right bower</em>), followed by the jack of the other suit of the same color as the
+					trump (<em>left bower</em>). Thus, the seven cards in the trump suit are ranked as
+					follows: <strong>J</strong> (<em>right</em>), <strong>J</strong> (<em>left</em>),
+					<strong>A</strong>, <strong>K</strong>, <strong>Q</strong>, <strong>10</strong>,
+					<strong>9</strong>.</li>
+			</ul>
+			<ul id="9f5f85f1-b766-4143-9ba1-3cb455ba7f08" class="bulleted-list">
+				<li>Example: when trump is spades, the seven trumps are <strong>J</strong>♠︎,
+					<strong>J</strong>♣︎, <strong>A</strong>♠︎, <strong>K</strong>♠︎, <strong>Q</strong>♠︎,
+					<strong>10</strong>♠︎, <strong>9</strong>♠︎. As long as spades are trump,
+					<strong>J</strong>♣︎ is considered, for all purposes, a spade, not a club, leaving only
+					five cards in the club suit.</li>
+			</ul>
+			<h1 id="1d994339-699b-4484-a231-d6f3ac1884d5" class=""><strong>Dealing</strong></h1>
+			<p id="adf18762-d3b1-4999-a95d-aa1c9180f77c" class="">The dealer shuffles the cards, then
+				deals them clockwise around the table, starting with the hand to the dealer’s left (as this
+				is a family game, the deck need not be cut after shuffling). Each player receives six cards,
+				dealt in groups of 1, 2, or 3 (or any combination thereof) at the dealer’s choosing.</p>
+			<h3 id="cb350d92-0c91-4ed0-ac7f-78de68b764da" class="">Misdeal scenarios</h3>
+			<p id="5973dc3a-2922-408e-8f34-d833d45b0557" class="">In certain cases where players are dealt
+				a &quot;bad hand&quot;, they may declare a misdeal, nullifying the deal and obligating the
+				dealer to re-deal all the cards.</p>
+			<p id="ccf1faf9-537f-4451-b5ea-1f142160f1af" class="">In our play, we trigger a misdeal on one
+				such scenario:</p>
+			<ul id="92b0f9b0-8838-4494-9c25-44bd2fa8a030" class="bulleted-list">
+				<li>If any player is dealt all four <strong>9</strong>s, they may reveal their hand to
+					trigger a misdeal.</li>
+			</ul>
+			<h1 id="07cca586-aa40-4c73-9c84-50cc3cc274f3" class=""><strong>Bidding</strong></h1>
+			<p id="4223e526-9f08-4eac-a920-0457fd49a9c3" class="">Starting with the player to the left of
+				the dealer and continuing clockwise, each player has one opportunity to bid.</p>
+			<p id="9f0be327-44ee-4396-b354-673fa12ceee5" class="">A bid specifies a contract: the winning
+				bidder commits their team to win, at minimum, the number of tricks that they bid, in
+				exchange for the privilege of naming the trump suit and leading the first card for that
+				round.</p>
+			<p id="f3eb2b68-69cc-415c-9503-9dbfdb08ce33" class="">Any number from 1 to 6 (inclusive) is a
+				valid bid (although 1, 5, and 6 are rarely used due to the Special Bids), and a player may
+				also pass. A player places their bid by speaking the number out loud, or passes by saying
+				“pass” and/or knocking on the table.</p>
+			<p id="3ab70a14-c80a-4c01-9c6c-f0967d0c4036" class="">Each subsequent player must bid strictly
+				higher than the current highest bid, or else they must pass. Once all four players have bid
+				or passed, the player who bid the highest, having won the bid, names any one of the four
+				suits as trump. If all four players passed, the cards are re-dealt and the bidding starts
+				anew.</p>
+			<h3 id="d54c7ab8-bb8e-4cd2-95a9-aa2171cf3a69" class="">Variations:</h3>
+			<ul id="30b66df1-26ca-4408-a9d9-6f9ded957722" class="bulleted-list">
+				<li>Some communities allow the highest bidder to name “no trump”, where there are no left
+					and right bowers, leaving <strong>A</strong> high in all four suits. Our family does not
+					use this.</li>
+			</ul>
+			<ul id="d37b3f0a-5c17-46c1-bb4b-9cfb160dc5a4" class="bulleted-list">
+				<li>Some communities require the dealer to place a minimum bid (often 3 or 4) if all the
+					preceding players have passed. We don’t do this either.</li>
+			</ul>
+			<h2 id="cd8cf3dc-b49a-4e0b-96f1-3a70adbfa6ea" class=""><strong>Special Bids: Playing
+					Alone</strong></h2>
+			<p id="83418516-8cd1-42b2-acd0-75d467f90cd3" class="">In addition to the conventional bids
+				described above, <strong>a player may also bid to take all six tricks by playing
+					alone</strong>. This is nicknamed <em>shooting the moon</em>, or simply shooting. A player
+				may do this in one of two ways:</p>
+			<ul id="8ccbe089-4591-4cd6-8215-6a35a37be3c8" class="bulleted-list">
+				<li>The player bids to play alone after discarding one card from their own hand and
+					replacing it with a card from their partner’s hand (this exchange is often called
+					<em>partner&#x27;s best</em>). This bid is worth 12 points, and is placed by the player
+					dramatically laying their discard face-down on the table. If they win the bid, that player
+					names the trump suit, and then the player’s partner selects a card from their own hand to
+					replace the bidder’s discard.</li>
+			</ul>
+			<ul id="6b7ba77f-ac8c-420f-8ef8-926f9b3f19a0" class="bulleted-list">
+				<li>The player may also bid to play alone using their hand as-is. This bid is worth 24
+					points, and may be placed whether or not a player has already bid 12. This bid is placed
+					by the player announcing &quot;I&#x27;m going alone&quot; and/or saying the number 24.
+				</li>
+			</ul>
+			<p id="af800a00-18c9-4360-a84d-9a52496ca440" class="">A bid of 12 may be subsequently raised
+				only by a bid of 24. In exceedingly rare cases, a 24 may be raised by a subsequent bid of
+				48, which, other than the point value, behaves the same as the 24-point bid. 48 may be bid
+				only to raise an existing bid of 24. Bids may theoretically continue to double in this
+				fashion.</p>
+			<p id="c2b84c7a-478a-4b91-a4c5-0cc04a3fa8f4" class="">In either case, upon winning a lone bid,
+				the partner of the lone player lays their cards face-down on the table and does not
+				participate in the play for that round<strong>. The lone player must take all six tricks to
+					fulfill the bid.</strong></p>
+			<h1 id="45663383-2958-4357-a128-1842e2cfb11c" class=""><strong>The Play</strong></h1>
+			<p id="1499a81b-3e99-43a9-a9f9-10948308dc89" class="">The player who won the bidding leads the
+				first trick by selecting a card from their hand and playing it face-up in the center of the
+				table. There are no restrictions on what card may be led. Proceeding clockwise around the
+				table, each of the three subsequent players also plays a card to the trick. Players must
+				<em>follow suit</em>, that is, play a card whose suit matches the card led; if a player
+				cannot follow suit, they may play any card of their choosing.</p>
+			<p id="f7fae7ac-45b5-4466-b312-1ee8bd577649" class="">Once all four players have played, the
+				trick (the four cards that were played) is won by the player who played the highest card of
+				the suit led (if no trumps were played) or the highest trump (if trumps were played). The
+				trick is collected by either the winning player or their partner (whichever is most
+				convenient) and placed face-down in front of them on the table. The player who won the trick
+				leads the next one, and play continues in this fashion until all six tricks have been.</p>
+			<h3 id="0b12980f-c927-4e77-ada4-2970e742645f" class="">House rule</h3>
+			<p id="7bfce7e6-5cf3-4a2f-ab74-befc16f966f0" class="">If a player about to lead is certain
+				that they have the cards necessary to take all the remaining tricks (for example, the only
+				trumps left unplayed), they may lay down their hand face-up in lieu of leading a card. The
+				players verify the hand and, if any cards are deemed not to be certain winners, the
+				uncertain tricks are awarded to the opposing team.</p>
+			<h1 id="8bb45932-b7e7-49c6-aaa7-067d26ef56f4" class=""><strong>Scoring</strong></h1>
+			<p id="aff3bc44-4c8f-4cf0-b4b8-965dd381b48e" class="">Once all six tricks have been played,
+				both teams increment their score, with the winning bidder’s team scoring first:</p>
+			<ul id="6524e2c5-5fdd-466b-b23b-8e61f0310b27" class="bulleted-list">
+				<li>If the winning bidder’s team took at least the number of tricks required by their bid,
+					that team scores one point per trick that they took. If the winning bidder succeeded in
+					taking all six tricks while playing alone, they score the point value of their bid (12,
+					24, etc.).</li>
+			</ul>
+			<ul id="c8883a17-cf7b-46dd-bf18-4aece2398cf1" class="bulleted-list">
+				<li>If the winning bidder’s team did not succeed in taking the number of tricks required by
+					their bid, they are said to be <em>set</em> (or <em>euchred</em>), and they lose points
+					equal to the value of their bid (teams are allowed to have negative points).</li>
+			</ul>
+			<ul id="7fc3329f-ff2a-4ce2-a78d-ee34b55d619b" class="bulleted-list">
+				<li>In either case, the opposing team scores one point per trick they took.</li>
+			</ul>
+			<p id="6a9fba89-84e5-4acf-9174-f6068b6bbe6c" class="">If either team reaches 32 points, that
+				team wins the game. If both teams reach 32 in the same round, the winning bidder’s team
+				scores first and thus wins (even if the opposing team would end up at a higher score).</p>
+			<h1 id="84f1501e-7682-446a-a348-0d0ed6bd83af" class=""><strong>Irregularities</strong></h1>
+			<p id="01bd19af-0de6-4935-83b8-fa219526bfc9" class="">Euchre is a family game, and
+				Midwesterners trust each other, so any irregularities should be handled at the players’
+				discretion.</p>
+			<hr id="1ba9161e-8b9a-4d02-98c3-9f7a4a577d3a" />
+			<p id="00de29b9-2e98-4efb-b580-6ace999adcb7" class="">© 2020 Andrew Brandon-Rumman</p>
+			<p id="a7489785-c953-4bef-9ac6-b304a844c4a1" class="">
+			</p>
+		</div>
+	</article>
+</body>
+
+</html>
