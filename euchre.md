@@ -85,7 +85,3 @@ If either team reaches 32 points, that team wins the game. If both teams reach 3
 # **Irregularities**
 
 Euchre is a family game, and Midwesterners trust each other, so any irregularities should be handled at the players’ discretion.
-
----
-
-© 2020 Andrew Brandon-Rumman
