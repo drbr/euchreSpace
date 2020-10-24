@@ -86,4 +86,4 @@ Euchre is a family game, and Midwesterners trust each other, so any irregulariti
 
 ---
 
-©2020 Andrew Brandon-Rumman
+© 2020 Andrew Brandon-Rumman
