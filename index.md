@@ -82,6 +82,8 @@ Once all six tricks have been played, both teams increment their score, with the
 
 If either team reaches 32 points, that team wins the game. If both teams reach 32 in the same round, the winning bidder’s team scores first and thus wins (even if the opposing team would end up at a higher score).
 
+  If neither team reaches 32 points, the deal passes to the left and another round is played.
+
 # Irregularities
 
 Euchre is a family game, and Midwesterners trust each other, so any irregularities should be handled at the players’ discretion.
