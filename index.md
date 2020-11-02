@@ -18,11 +18,22 @@ Euchre is a trick-taking game. Each round consists of the following phases: Deal
 
 The game is played with a deck of 24 conventional American playing cards, consisting of **A**, **K**, **Q**, **J**, **10**, **9** in each of the four suits. Half of a pinochle deck is usually used, to avoid uneven wear on a 52-card deck.
 
-One suit is designated each round as trump, which outranks the other three non-trump suits:
+Each round, one of the four suits is selected to be trump, which outranks the other three suits for the purpose of winning tricks.
+The rank of cards within each suit is as follows:
 
-- In the non-trump suits, the rank is: **A** (_high_), **K**, **Q**, **J**, **10**, **9** (_low_).
-- In the trump suit, the jack of the trump suit is the highest trump (known as the _right bower_), followed by the jack of the other suit of the same color as the trump (_left bower_). Thus, the seven cards in the trump suit are ranked as follows: **J** (_right_), **J** (_left_), **A**, **K**, **Q**, **10**, **9**.
-- Example: when trump is spades, the seven trumps are **J**♠︎, **J**♣︎, **A**♠︎, **K**♠︎, **Q**♠︎, **10**♠︎, **9**♠︎. As long as spades are trump, **J**♣︎ is considered, for all purposes, a spade, not a club, leaving only five cards in the club suit.
+- In the non-trump suits, the rank is (from high to low): **A**, **K**, **Q**, **J**, **10**, **9**
+  (with the exception that the suit of the same color as trump is missing its **J** – see below).
+- In the trump suit, the jack of the trump suit is the highest trump (known as the _right bower_),
+  followed by the jack of the other suit of the same color as the trump (_left bower_). Thus, the
+  seven cards in the trump suit are ranked as follows:
+  **J** (_right_), **J** (_left_), **A**, **K**, **Q**, **10**, **9**.
+
+### Example
+
+When trump is spades, the seven trumps are **J**♠︎, **J**♣︎, **A**♠︎, **K**♠︎, **Q**♠︎, **10**♠︎, **9**♠︎.
+_As long as spades are trump, **J**♣︎ is considered, for all purposes, a spade, not a club_, leaving
+only five cards in the club suit (**A**♣︎, **K**♣︎, **Q**♣︎, **10**♣︎, **9**♣︎). The two red suits each
+have the expected six cards.
 
 # Dealing
 
@@ -82,7 +93,7 @@ Once all six tricks have been played, both teams increment their score, with the
 
 If either team reaches 32 points, that team wins the game. If both teams reach 32 in the same round, the winning bidder’s team scores first and thus wins (even if the opposing team would end up at a higher score).
 
-  If neither team reaches 32 points, the deal passes to the left and another round is played.
+If neither team reaches 32 points, the deal passes to the left and another round is played.
 
 # Irregularities
 
