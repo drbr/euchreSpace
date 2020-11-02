@@ -91,27 +91,28 @@ the cards are re-dealt by the same dealer and the bidding starts anew.
 
 ### Special Bids: Playing Alone
 
-In addition to the conventional bids described above, **a player may also bid to take all six tricks
-by playing alone**. This is nicknamed _shooting the moon_, or simply shooting. A player may do this
-in one of two ways:
+In addition to the bids described above, **a player may also bid to take all six tricks by playing
+alone**. This is nicknamed _shooting the moon_, or simply "shooting". A player may do this in one of
+two ways:
 
-- The player bids to play alone after discarding one card from their own hand and replacing it with
-  a card from their partner’s hand (this exchange is often called _partner's best_). This bid is
-  worth 12 points, and is placed by the player dramatically laying their discard face-down on the
-  table. If they win the bid, that player names the trump suit, and then the player’s partner
-  selects a card from their own hand to replace the bidder’s discard.
+- The player bids to play alone after exchanging one card from their own hand with a card from their
+  partner’s hand (in conventional Euchre, this exchange is often called _partner's best_). To place
+  this bid, which is worth 12 points, the player dramatically lays their discard face-down on the
+  table. Upon winning the bid, the player announces the trump suit, and then their partner takes the
+  face-down card from the table into their own hand. The partner then selects one of their own cards
+  (presumably, the best one) and passes it face-down back to the dealer.
 - The player may also bid to play alone using their hand as-is. This bid is worth 24 points, and may
-  be placed whether or not a player has already bid 12. This bid is placed by the player announcing
-  "I'm going alone" and/or saying the number 24.
+  be placed whether or not a player has already bid 12. A player places this bid by announcing "I'm
+  going alone" and/or saying the number 24.
 
 A bid of 12 may be subsequently raised only by a bid of 24. In exceedingly rare cases, a 24 may be
-raised by a subsequent bid of 48, which, other than the point value, behaves the same as the
+raised by a subsequent bid of 48, which, aside from the point value, behaves the same as the
 24-point bid. 48 may be bid only to raise an existing bid of 24. Bids may theoretically continue to
 double in this fashion.
 
-In either case, upon winning a lone bid, the partner of the lone player lays their cards face-down
-on the table and does not participate in the play for that round**. The lone player must take all
-six tricks to fulfill the bid.**
+In either case, upon winning one of these bids, the partner of the winning bidder lays their hand
+face-down on the table and does not participate in The Play for that round. **The lone player must
+take all six tricks to fulfill the bid.**
 
 # The Play
 
