@@ -51,13 +51,23 @@ In our play, we trigger a misdeal on one such "bad hand": if any player is dealt
 
 # Bidding
 
-Starting with the player to the left of the dealer and continuing clockwise, each player has one opportunity to bid.
+Starting with the player to the left of the dealer and continuing clockwise around the table, each
+player has one opportunity to bid, or pass.
 
-A bid specifies a contract: the winning bidder commits their team to win, at minimum, the number of tricks that they bid, in exchange for the privilege of naming the trump suit and leading the first card for that round.
+A bid specifies a contract: a player, if they win the bid, commits their team to win, at minimum,
+the number of tricks specified in their bid, in exchange for the privilege of naming the trump suit
+and leading the first card for that round.
 
-Any number from 1 to 6 (inclusive) is a valid bid (although 1, 5, and 6 are rarely used due to the Special Bids), and a player may also pass. A player places their bid by speaking the number out loud, or passes by saying “pass” and/or knocking on the table.
+Any number from 1 to 6 (inclusive) is a valid bid (although 1, 5, and 6 are rarely used due to the
+Special Bids), and players may also pass. A player bids by speaking the number out loud, or passes
+by saying “pass” and/or knocking on the table.
 
-Each subsequent player must bid strictly higher than the current highest bid, or else they must pass. Once all four players have bid or passed, the player who bid the highest, having won the bid, names any one of the four suits as trump. If all four players passed, the cards are re-dealt and the bidding starts anew.
+The first player (to the left of the dealer) may choose to bid any number or pass. Each subsequent
+player must bid strictly higher than the highest bid thusfar, or else they must pass.
+
+Once all four players have bid or passed, the player who bid the highest, having won the bid, names
+any one of the four suits as trump, and the round proceeds to The Play.
+If all four players passed, the cards are re-dealt by the same dealer and the bidding starts anew.
 
 ### Variations
 
