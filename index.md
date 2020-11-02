@@ -62,7 +62,7 @@ deal and obligating the dealer to re-deal all the cards.
 
 In our play, we trigger a misdeal on one such "bad hand": if any player is dealt all four **9**s.
 
-# Bidding
+# Bidding and Selecting Trump
 
 Starting with the player to the left of the dealer and continuing clockwise around the table, each
 player has one opportunity to bid, or pass.
@@ -71,9 +71,9 @@ A bid specifies a contract: a player, if they win the bid, commits their team to
 the number of tricks specified in their bid, in exchange for the privilege of naming the trump suit
 and leading the first card for that round.
 
-Any number from 1 to 6 (inclusive) is a valid bid (although 1, 5, and 6 are rarely used due to the
-Special Bids), and players may also pass. A player bids by speaking the number out loud, or passes
-by saying “pass” and/or knocking on the table.
+Any number from 1 to 6 (inclusive) is a valid bid (although 1, 5, and 6 are rarely used), and
+players may also pass. A player bids by speaking the number out loud, or passes by saying “pass”
+and/or knocking on the table.
 
 The first player (to the left of the dealer) may choose to bid any number or pass. Each subsequent
 player must bid strictly higher than the highest bid thusfar, or else they must pass.
@@ -84,16 +84,21 @@ the cards are re-dealt by the same dealer and the bidding starts anew.
 
 ### Variations
 
-- Some communities allow the highest bidder to name “no trump”, where there are no left or right
-  bowers, leaving **A** high in all four suits. Our family does not do this.
-- Some communities require the dealer to place a minimum bid (often 3 or 4) if all the preceding
-  players have passed. We don’t do this either.
+Some communities adopt additional house rules in the Bidding phase. Our family doesn't use any of
+these, but some common ones are listed here.
+
+- The winning bidder is allowed to name "no trump", where there are no left or right bowers, leaving
+  **A** high in all four suits.
+- Players must bid at least a minimum value (often 3), or else pass.
+- If all the preceding players passed, the dealer must place a minimum bid (often 3 or 4). This is
+  similar to the _stick the dealer_ variation in conventional Euchre, but is not as necessary in Bid
+  Euchre, as almost always at least one player has a strong enough hand to bid.
 
 ### Special Bids: Playing Alone
 
 In addition to the bids described above, **a player may also bid to take all six tricks by playing
-alone**. This is nicknamed _shooting the moon_, or simply "shooting". A player may do this in one of
-two ways:
+alone**. We call this _shooting the moon_, or simply "shooting". A player may do this in one of two
+ways:
 
 - The player bids to play alone after exchanging one card from their own hand with a card from their
   partner’s hand (in conventional Euchre, this exchange is often called _partner's best_). To place
