@@ -99,8 +99,8 @@ two ways:
   partner’s hand (in conventional Euchre, this exchange is often called _partner's best_). To place
   this bid, which is worth 12 points, the player dramatically lays their discard face-down on the
   table. Upon winning the bid, the player announces the trump suit, and then their partner takes the
-  face-down card from the table into their own hand. The partner then selects one of their own cards
-  (presumably, the best one) and passes it face-down back to the dealer.
+  face-down card from the table up into their own hand. The partner then selects one of their own
+  cards (presumably, the best one) and passes it face-down back to the dealer.
 - The player may also bid to play alone using their hand as-is. This bid is worth 24 points, and may
   be placed whether or not a player has already bid 12. A player places this bid by announcing "I'm
   going alone" and/or saying the number 24.
@@ -110,30 +110,32 @@ raised by a subsequent bid of 48, which, aside from the point value, behaves the
 24-point bid. 48 may be bid only to raise an existing bid of 24. Bids may theoretically continue to
 double in this fashion.
 
-In either case, upon winning one of these bids, the partner of the winning bidder lays their hand
-face-down on the table and does not participate in The Play for that round. **The lone player must
-take all six tricks to fulfill the bid.**
+When one of these bids is made, the partner of the winning bidder lays their hand face-down on the
+table and does not participate in The Play for that round. **The lone player must take all six
+tricks to fulfill the bid.**
 
 # The Play
 
-The player who won the bidding leads the first trick by selecting a card from their hand and playing
+The player who won the Bidding leads the first trick by selecting a card from their hand and playing
 it face-up in the center of the table. There are no restrictions on what card may be led. Proceeding
-clockwise around the table, each of the three subsequent players also plays a card to the trick.
-Players must _follow suit_, that is, play a card whose suit matches the card led; if a player cannot
-follow suit, they may play any card of their choosing.
+clockwise around the table, each of the other three players also plays a card onto the trick. These
+players must _follow suit_ (play a card whose suit matches the card led) if able; if a player cannot
+follow suit, they may play any other card from their hand.
 
 Once all four players have played, the trick (the four cards that were played) is won by the player
-who played the highest card of the suit led (if no trumps were played) or the highest trump (if
-trumps were played). The trick is collected by either the winning player or their partner (whichever
-is most convenient) and placed face-down in front of them on the table. The player who won the trick
-leads the next one, and play continues in this fashion until all six tricks have been.
+who played the highest card of the suit led (if the trick contained no trumps) or the highest trump
+(if any trumps were played). The trick is collected by either the winning player or their partner
+(whichever is most convenient) and placed face-down in front of them on the table.
+
+The player who won the trick leads the next one, and play continues in this fashion until all six
+tricks have been played.
 
 ### House Rule
 
-If a player about to lead is certain that they have the cards necessary to take all the remaining
-tricks (for example, the only trumps left unplayed), they may lay down their hand face-up in lieu of
-leading a card. The players verify the hand and, if any cards are deemed not to be certain winners,
-the uncertain tricks are awarded to the opposing team.
+If a player about to lead is certain that they have the cards necessary to win all the remaining
+tricks, they may lay down their hand face-up in lieu of playing out those tricks. The players verify
+the hand and, if any cards are deemed not to be certain winners, the uncertain tricks are awarded to
+the opposing team.
 
 # Scoring
 
@@ -141,16 +143,16 @@ Once all six tricks have been played, both teams increment their score, with the
 team scoring first:
 
 - If the winning bidder’s team took at least the number of tricks required by their bid, that team
-  scores one point per trick that they took. If the winning bidder succeeded in taking all six
-  tricks while playing alone, they score the point value of their bid (12, 24, etc.).
+  scores one point for each trick taken. If the winning bidder succeeded in taking all six tricks
+  while playing alone, they score the point value of their bid (12, 24, etc.).
 - If the winning bidder’s team did not succeed in taking the number of tricks required by their bid,
-  they are said to be _set_ (or _euchred_), and they lose points equal to the value of their bid
+  they are said to be _euchred_ (or _set_), and their score decreases by the value of their bid
   (teams are allowed to have negative points).
-- In either case, the opposing team scores one point per trick they took.
+- In either case, the opposing team scores one point for each trick taken.
 
-If either team reaches 32 points, that team wins the game. If both teams reach 32 in the same round,
-the winning bidder’s team scores first and thus wins (even if the opposing team would end up at a
-higher score).
+The first team to reach 32 points wins the game. If both teams reach 32 in the same round, the
+winning bidder’s team scores first and thus wins the game (even if the opposing team would end up at
+a higher score).
 
 If neither team reaches 32 points, the deal passes to the left and another round is played.
 
