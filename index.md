@@ -5,6 +5,12 @@ title: Bid Euchre
 The following rules are specific to how the game of “cards" was played in my family in southeast
 Michigan. It’s essentially a single-deck 4-player Bid Euchre with no joker.
 
+**Note to uninitiated readers:** the game described here is different enough from what most people
+know as Euchre that if you learn this game and then invite some Midwesterners to play "Euchre", you
+will be met with unfortunate confusion. Learn more about conventional Euchre
+[here](https://www.pagat.com/euchre/euchre.html), and about other variations of Bid Euchre
+[here](https://www.pagat.com/euchre/bideuch.html).
+
 _Published in memory of John Magiera, Euchre King of the Lake Cottage._
 
 # Players
