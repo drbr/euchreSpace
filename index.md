@@ -37,15 +37,17 @@ have the expected six cards.
 
 # Dealing
 
-The dealer shuffles the cards, then deals them clockwise around the table, starting with the hand to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Each player receives six cards, dealt in groups of 1, 2, or 3 (or any combination thereof) at the dealer’s choosing.
+The dealer shuffles the cards, then deals them clockwise around the table, starting with the player
+to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Each
+player receives six cards, dealt in groups of 1, 2, or 3 (or any combination thereof) at the
+dealer’s choosing.
 
 ### Misdeal Scenarios
 
-In certain cases where players are dealt a "bad hand", they may declare a misdeal, nullifying the deal and obligating the dealer to re-deal all the cards.
+In certain cases where players are dealt a "bad hand", they may reveal their hand, nullifying the
+deal and obligating the dealer to re-deal all the cards.
 
-In our play, we trigger a misdeal on one such scenario:
-
-- If any player is dealt all four **9**s, they may reveal their hand to trigger a misdeal.
+In our play, we trigger a misdeal on one such "bad hand": if any player is dealt all four **9**s.
 
 # Bidding
 
