@@ -71,8 +71,10 @@ If all four players passed, the cards are re-dealt by the same dealer and the bi
 
 ### Variations
 
-- Some communities allow the highest bidder to name “no trump”, where there are no left and right bowers, leaving **A** high in all four suits. Our family does not use this.
-- Some communities require the dealer to place a minimum bid (often 3 or 4) if all the preceding players have passed. We don’t do this either.
+- Some communities allow the highest bidder to name “no trump”, where there are no left or right
+  bowers, leaving **A** high in all four suits. Our family does not do this.
+- Some communities require the dealer to place a minimum bid (often 3 or 4) if all the preceding
+  players have passed. We don’t do this either.
 
 ### Special Bids: Playing Alone
 
