@@ -11,7 +11,7 @@ will be met with unfortunate confusion. Learn more about conventional Euchre
 [here](https://www.pagat.com/euchre/euchre.html), and about other variations of Bid Euchre
 [here](https://www.pagat.com/euchre/bideuch.html).
 
-_Published in memory of John Magiera, Euchre King of the Lake Cottage._
+_Published in memory of John Magiera, Euchre King of the lake cottage._
 
 # Players
 
@@ -51,8 +51,7 @@ two red suits each have the expected six cards.
 # Dealing
 
 The dealer shuffles the cards, then deals them clockwise around the table, starting with the player
-to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Each
-player receives six cards, dealt in groups of 1, 2, or 3 (or any combination thereof) at the
+to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Deal six cards to each player, in groups of 1, 2, or 3 (or any combination thereof) at the
 dealer’s choosing.
 
 ### Misdeal Scenarios
@@ -60,15 +59,15 @@ dealer’s choosing.
 In certain cases where players are dealt a "bad hand", they may reveal their hand, nullifying the
 deal and obligating the dealer to re-deal all the cards.
 
-In our play, we trigger a misdeal on one such "bad hand": if any player is dealt all four **9**s.
+In our play, we trigger a misdeal on one such "bad hand": if any player is dealt all four **9**s, but other house rules are possible here.
 
 # Bidding and Selecting Trump
 
 Starting with the player to the left of the dealer and continuing clockwise around the table, each
-player has one opportunity to bid, or pass.
+player has one opportunity to bid.
 
 A bid specifies a contract: a player, if they win the bid, commits their team to win, at minimum,
-the number of tricks specified in their bid, in exchange for the privilege of naming the trump suit
+the number of tricks declared in their bid, in exchange for the privilege of naming the trump suit
 and leading the first card for that round.
 
 Any number from 1 to 6 (inclusive) is a valid bid (although 1, 5, and 6 are rarely used), and
@@ -90,7 +89,7 @@ these, but some common ones are listed here.
 - The winning bidder is allowed to name "no trump", where there are no left or right bowers, leaving
   **A** high in all four suits.
 - Players must bid at least a minimum value (often 3), or else pass.
-- If all the preceding players passed, the dealer must place a minimum bid (often 3 or 4). This is
+- If all the preceding players passed, the dealer must make a minimum bid (often 3 or 4). This is
   similar to the _stick the dealer_ variation in conventional Euchre, but is not as necessary in Bid
   Euchre, as almost always at least one player has a strong enough hand to bid.
 
@@ -105,7 +104,7 @@ ways:
   this bid, which is worth 12 points, the player dramatically lays their discard face-down on the
   table. Upon winning the bid, the player announces the trump suit, and then their partner takes the
   face-down card from the table up into their own hand. The partner then selects one of their own
-  cards (presumably, the best one) and passes it face-down back to the dealer.
+  cards (presumably, the best one) and passes it face-down back to the dealer to replenish the dealer's 6-card hand.
 - The player may also bid to play alone using their hand as-is. This bid is worth 24 points, and may
   be placed whether or not a player has already bid 12. A player places this bid by announcing "I'm
   going alone" and/or saying the number 24.
@@ -153,7 +152,7 @@ team scoring first:
 - If the winning bidder’s team did not succeed in taking the number of tricks required by their bid,
   they are said to be _euchred_ (or _set_), and their score decreases by the value of their bid
   (teams are allowed to have negative points).
-- In either case, the opposing team scores one point for each trick taken.
+- In both cases, the opposing team scores one point for each trick taken.
 
 The first team to reach 32 points wins the game. If both teams reach 32 in the same round, the
 winning bidder’s team scores first and thus wins the game (even if the opposing team would end up at
