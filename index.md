@@ -59,7 +59,9 @@ dealer’s choosing.
 In certain cases where players are dealt a "bad hand", they may reveal their hand, nullifying the
 deal and obligating the dealer to re-deal all the cards.
 
-In our play, we trigger a misdeal on one such "bad hand": if any player is dealt all four **9**s, but other house rules are possible here.
+In our play, we trigger a misdeal on one such "bad hand": if any player is dealt all four **9**s,
+but other house rules are possible here, usually involving hands containing some combination of
+**9**s and **10**s.
 
 # Bidding and Selecting Trump
 
@@ -95,16 +97,16 @@ these, but some common ones are listed here.
 
 ### Special Bids: Playing Alone
 
-In addition to the bids described above, **a player may also bid to take all six tricks by playing
-alone**. We call this _shooting the moon_, or simply "shooting". A player may do this in one of two
-ways:
+In addition to the normal bids described above, a player may also bid take all six tricks while
+playing alone. We call this _shooting the moon_, or simply "shooting". There are two such bids:
 
 - The player bids to play alone after exchanging one card from their own hand with a card from their
   partner’s hand (in conventional Euchre, this exchange is often called _partner's best_). To place
   this bid, which is worth 12 points, the player dramatically lays their discard face-down on the
-  table. Upon winning the bid, the player announces the trump suit, and then their partner takes the
-  face-down card from the table up into their own hand. The partner then selects one of their own
-  cards (presumably, the best one) and passes it face-down back to the dealer to replenish the dealer's 6-card hand.
+  table, and/or saying the number 12. Upon winning the bid, the player names the trump suit, and
+  then their partner takes the face-down card from the table up into their own hand. The partner
+  then selects one of their own cards (ideally, the best one) and passes it face-down back to the
+  dealer to replenish the dealer's 6-card hand.
 - The player may also bid to play alone using their hand as-is. This bid is worth 24 points, and may
   be placed whether or not a player has already bid 12. A player places this bid by announcing "I'm
   going alone" and/or saying the number 24.
@@ -114,9 +116,9 @@ raised by a subsequent bid of 48, which, aside from the point value, behaves the
 24-point bid. 48 may be bid only to raise an existing bid of 24. Bids may theoretically continue to
 double in this fashion.
 
-When one of these bids is made, the partner of the winning bidder lays their hand face-down on the
-table and does not participate in The Play for that round. **The lone player must take all six
-tricks to fulfill the bid.**
+After one of these bids is made, the partner of the winning bidder lays their hand face-down on the
+table and does not participate in The Play for that round. **To fulfill the bid, the lone player
+must take all six tricks.**
 
 # The Play
 
