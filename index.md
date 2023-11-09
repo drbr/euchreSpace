@@ -128,10 +128,15 @@ clockwise around the table, each of the other three players also plays a card on
 players must _follow suit_ (play a card whose suit matches the card led) if able; if a player cannot
 follow suit, they may play any other card from their hand.
 
-Once all four players have played, the trick (the four cards that were played) is won by the player
-who played the highest card of the suit led (if the trick contained no trumps) or the highest trump
-(if any trumps were played). The trick is collected by either the winning player or their partner
-(whichever is most convenient) and placed face-down in front of them on the table.
+Once all four players have played their card, the trick (the four cards that were played) is won by
+the player who played the strongest card:
+
+- If the trick contains no trumps: the highest card of the suit led
+- If the trick contains one or more trumps: the highest trump
+
+The trick is collected by either the winning player or their partner (whichever is most convenient)
+and placed face-down in front of them on the table. Arrange them in such a way that they can be
+counted after the round is complete.
 
 The player who won the trick leads the next one, and play continues in this fashion until all six
 tricks have been played.
@@ -145,12 +150,12 @@ the opposing team.
 
 # Scoring
 
-Once all six tricks have been played, both teams increment their score, with the winning bidder’s
+Once all six tricks have been played, both teams may score points, with the winning bidder’s
 team scoring first:
 
-- If the winning bidder’s team took at least the number of tricks required by their bid, that team
-  scores one point for each trick taken. If the winning bidder succeeded in taking all six tricks
-  while playing alone, they score the point value of their bid (12, 24, etc.).
+- If the winning bidder’s team succeeded in taking at least the number of tricks required by their
+  bid, that team scores one point for each trick taken. If the winning bidder succeeded in taking
+  all six tricks while playing alone, they score the point value of their bid (12, 24, etc.).
 - If the winning bidder’s team did not succeed in taking the number of tricks required by their bid,
   they are said to be _euchred_ (or _set_), and their score decreases by the value of their bid
   (teams are allowed to have negative points).
