@@ -2,7 +2,9 @@
 title: Bid Euchre
 ---
 
-<a href="https://play.euchre.space" target="_blank"><button>Play Bid Euchre online!</button></a>
+<a href="https://play.euchre.space" target="_blank">
+<button class="play-online-button">Play online!</button>
+</a>
 
 The following rules are specific to how the game of “cards" was played in my family in southeast
 Michigan. It’s essentially a single-deck 4-player Bid Euchre with no joker.
