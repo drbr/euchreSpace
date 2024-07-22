@@ -51,8 +51,8 @@ two red suits each have the expected six cards.
 # Dealing
 
 The dealer shuffles the cards, then deals them clockwise around the table, starting with the player
-to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Deal six cards to each player, in groups of 1, 2, or 3 (or any combination thereof) at the
-dealer’s choosing.
+to the dealer’s left (as this is a family game, the deck need not be cut after shuffling). Deal six
+cards to each player, in groups of 1, 2, or 3 (or any combination thereof) at the dealer’s choosing.
 
 ### Misdeal Scenarios
 
